@@ -1,0 +1,19 @@
+from djitellopy import Tello
+tello = Tello()
+import time
+#take off
+tello.connect()
+tello.takeoff()
+tello.move_up(102)
+
+#turn
+tello.send_rc_control(0,0,0,-50)
+sleep(.33)
+#forward 
+tello.send_rc_control(0,50,0,0)
+sleep(29.1)
+#probaly moving much faster 
+#stop moving 
+tello.send_rc_control(0,0,0,0)
+#land
+tello.land 
