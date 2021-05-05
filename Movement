@@ -4,14 +4,15 @@ import time
 #take off
 tello.connect()
 tello.takeoff()
-tello.move_up(102)
-
+#move up
+tello.send_rc_control(0,0,50,0)
+sleep(3.92)
 #turn
 tello.send_rc_control(0,0,0,-50)
-sleep(.33)
+sleep(.47)
 #forward 
 tello.send_rc_control(0,50,0,0)
-sleep(29.1)
+sleep(3.89)
 #probaly moving much faster 
 #stop moving 
 tello.send_rc_control(0,0,0,0)
